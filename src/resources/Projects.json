@@ -1,0 +1,18 @@
+{
+    "Projects": [
+        {
+            "name": "C++ 3D voxel game engine",
+            "description": "Voxel game engine made with C++, OpenGl, glew and glfw, currently only made the first person camera and lighting.",
+            "lang": "C++",
+            "link": "",
+            "color": "#f34b7d"
+        },
+        {
+            "name": "zvet.xyz",
+            "description": "The website you are currently looking at, made woth Create React App.",
+            "lang": "JavaScript",
+            "link": "",
+            "color": "#f1e05a"
+        }
+    ]
+}
