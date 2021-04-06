@@ -64,9 +64,12 @@ const GlassContainer = styled.div`
 `;
 
 const FlexContainer = styled.div`
+    overflow: hidden;
     display: flex;
     flex-flow: column;
     height: 100%;
+    width: 100%
+    flex-wrap: wrap;
 `;
 
 const TitleLineWrapper = styled.span`

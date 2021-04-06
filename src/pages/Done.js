@@ -1,31 +1,8 @@
 import styled from "styled-components";
 import GlassCard from "../components/GlassCardRepo";
-import { useState } from "react";
-
-async function waitForFetch(){
-    const profileUrl = "https://api.github.com/repos/Tevzi2/";
-    const data = Promise.all([
-        fetch(profileUrl + "3DCubeRenderCMD", {method: "GET", headers: {'Accept': 'application/vnd.github.v3+json'}}).then((response) => response.json()),
-        fetch(profileUrl + "file-scraper", {method: "GET", headers: {'Accept': 'application/vnd.github.v3+json'}}).then((response) => response.json()),
-        fetch(profileUrl + "webglelectronproject", {method: "GET", headers: {'Accept': 'application/vnd.github.v3+json'}}).then((response) => response.json())
-    ])
-
-
-    //console.log(data);
-
-    return data;
-}
+import { Done } from "../resources/Done.json"
 
 function Doing(){
-    const [getItem, setItem] = useState([]);
-
-    const finishedRepos = [
-        "3DCubeRenderCMD",
-        "file-scraper",
-        "webglelectronproject"
-    ];
-    waitForFetch(finishedRepos).then(d => {setItem(d)});
-
     return(
         <div>
             <TitleHead>
@@ -36,17 +13,17 @@ function Doing(){
                     Here are some of the projects I've finished
                 </Info>
                 <GridContainer>
-                    {getItem ?
+                    {Done ?
                         <>
-                           {getItem.map((repo) => (
+                           {Done.map((repo) => (
                                 <GlassCard 
                                     wdt="96%"
-                                    high="230px"
+                                    high="100%"
                                     repoTitl={repo.name}
                                     repoDesc={repo.description}
-                                    repoCol="#f1e05a"
-                                    repoLang={repo.language}
-                                    repoLink={repo.svn_url}
+                                    repoCol={repo.color}
+                                    repoLang={repo.lang}
+                                    repoLink={repo.link}
                                 />
                             ))}
                         </> :

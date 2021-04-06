@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import GlassCardWip from "../components/GlassCardWip";
 import { Projects } from "../resources/Projects.json"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Doing(){
     return(
@@ -16,7 +17,7 @@ function Doing(){
                     {Projects.map(pr => (
                         <GlassCardWip
                             wdt="96%"
-                            high="230px"
+                            high="100%"
                             projTitl={pr.name}
                             projDesc={pr.description}
                             projCol={pr.color}

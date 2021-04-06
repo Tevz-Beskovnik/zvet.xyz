@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { Discord, Github, Twitter } from "../resources/Icons";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
 
