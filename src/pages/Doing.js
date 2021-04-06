@@ -15,8 +15,8 @@ function Doing(){
                 <GridContainer>
                     {Projects.map(pr => (
                         <GlassCardWip
-                            wdt="65%"
-                            high="280px"
+                            wdt="96%"
+                            high="230px"
                             projTitl={pr.name}
                             projDesc={pr.description}
                             projCol={pr.color}
@@ -36,6 +36,7 @@ const TitleHead = styled.h1`
 `;
 
 const GridContainer = styled.div`
+    display: grid;
     grid-template-columns: 50% 50%;
     overflow-y: scroll;
     width: 100%;
