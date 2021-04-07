@@ -14,7 +14,7 @@ function MainContainer(){
     })
 
     return (
-        <MainCont>
+        <MainCont className="col-lg-9">
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/done" component={Done}/>
@@ -27,7 +27,9 @@ function MainContainer(){
 }
 
 const MainCont = styled.main`
+    max-height: 200vh;
     padding: 30px;
+    margin: 0;
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 40px;

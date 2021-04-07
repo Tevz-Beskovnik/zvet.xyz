@@ -4,6 +4,8 @@ import { Projects } from "../resources/Projects.json"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Doing(){
+    let i = 0;
+
     return(
         <div>
             <TitleHead>
@@ -13,18 +15,36 @@ function Doing(){
                 <Info>
                     Here are the projects im currently working on:
                 </Info>
-                <GridContainer>
-                    {Projects.map(pr => (
-                        <GlassCardWip
-                            wdt="96%"
-                            high="100%"
-                            projTitl={pr.name}
-                            projDesc={pr.description}
-                            projCol={pr.color}
-                            projLink={pr.link}
-                            projLang={pr.lang}
-                        />
-                    ))}
+                <GridContainer className="row">
+                    {Projects.map(pr => { i++; if(i%2 === 0){
+                        return (
+                            <>
+                                <GlassCardWip
+                                    wdt="96%"
+                                    high="100%"
+                                    projTitl={pr.name}
+                                    projDesc={pr.description}
+                                    projCol={pr.color}
+                                    projLink={pr.link}
+                                    projLang={pr.lang}
+                                />
+                                <Separator className="w-100"></Separator>
+                            </>
+                        );
+                    }else{
+                        return (
+                            <GlassCardWip
+                                wdt="96%"
+                                high="100%"
+                                projTitl={pr.name}
+                                projDesc={pr.description}
+                                projCol={pr.color}
+                                projLink={pr.link}
+                                projLang={pr.lang}
+                            />
+                        )  
+                    }
+                    })}
                 </GridContainer>
             </InfoCont>
         </div>
@@ -37,8 +57,8 @@ const TitleHead = styled.h1`
 `;
 
 const GridContainer = styled.div`
-    display: grid;
-    grid-template-columns: 50% 50%;
+    /*display: grid;
+    grid-template-columns: 50% 50%;*/
     overflow-y: scroll;
     width: 100%;
     height: 70vh;
@@ -47,6 +67,12 @@ const GridContainer = styled.div`
     &::-webkit-scrollbar {
         width: 3px;
     }
+`;
+
+const Separator = styled.div`
+    height: 0;
+    margin: 0;
+    padding: 0;
 `;
 
 const InfoCont = styled.div`

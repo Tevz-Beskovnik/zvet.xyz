@@ -3,6 +3,8 @@ import GlassCard from "../components/GlassCardRepo";
 import { Done } from "../resources/Done.json"
 
 function Doing(){
+    let i = 0;
+
     return(
         <div>
             <TitleHead>
@@ -12,11 +14,24 @@ function Doing(){
                 <Info>
                     Here are some of the projects I've finished
                 </Info>
-                <GridContainer>
+                <GridContainer className="row">
                     {Done ?
                         <>
-                           {Done.map((repo) => (
-                                <GlassCard 
+                            {Done.map((repo) => { i++; if(i%2 === 0){ return (
+                                <>
+                                    <GlassCard 
+                                        wdt="96%"
+                                        high="100%"
+                                        repoTitl={repo.name}
+                                        repoDesc={repo.description}
+                                        repoCol={repo.color}
+                                        repoLang={repo.lang}
+                                        repoLink={repo.link}
+                                    />
+                                    <Separator className="w-100"></Separator>
+                                </>
+                            )}else{ return (
+                                <GlassCard
                                     wdt="96%"
                                     high="100%"
                                     repoTitl={repo.name}
@@ -25,7 +40,7 @@ function Doing(){
                                     repoLang={repo.lang}
                                     repoLink={repo.link}
                                 />
-                            ))}
+                            )}})}
                         </> :
                         <></>
                     }
@@ -40,13 +55,20 @@ const TitleHead = styled.h1`
     font-size: 40px;
 `;
 
+const Separator = styled.div`
+    height: 0;
+    margin: 0;
+    padding: 0;
+`;
+
 const GridContainer = styled.div`
-    display: grid;
-    grid-template-columns: 50% 50%;
+    /*display: grid;
+    grid-template-columns: 50% 50%;*/
     overflow-y: scroll;
     width: 100%;
     height: 70vh;
     padding-bottom: 10px;
+    margin-bottom: 20px;
 
     &::-webkit-scrollbar {
         width: 3px;

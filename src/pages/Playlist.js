@@ -13,7 +13,7 @@ function Doing(){
                 <FlexContainer>
                     <CardShadow width="auto" height="auto">
                         <GlassContainer>
-                            <iframe title="spotify" src="https://open.spotify.com/embed/playlist/7dpAigpoyoAl9HdkIxuRvw" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+                            <iframe title="spotify" src="https://open.spotify.com/embed/playlist/7dpAigpoyoAl9HdkIxuRvw" width="100%" height="380px" frameborder="0" allowtransparency="true" allow="encrypted-media">
 
                             </iframe>
                         </GlassContainer>

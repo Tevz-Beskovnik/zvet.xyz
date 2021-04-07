@@ -6,21 +6,25 @@ import styled from "styled-components";
 
 function App() {
   return (
-    <Container>
+    <Container className="row">
       <Router>
-        <NavBar />
-        <MainContainer />
+        <NavBar/>
+        <MainContainer/>
       </Router>
     </Container>
   );
 }
 
 const Container = styled.div`
-    font-family: 'Arial';
-    display: grid;
-    grid-template-columns: 22% 78%;
+    overflow: hidden;
+    /*display: grid;
+    grid-template-columns: 22% 78%;*/
     background: linear-gradient(300deg, #C85549, #B63277, #751F83);
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    max-height: 200vh;
+    margin: 0;
+    padding: 0;
 `;
 
 export default App;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { Book } from "../resources/Icons"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function GlassCard({wdt, high, repoTitl, repoDesc, repoLang, repoCol, repoLink}){
     return(
-        <CardShadowMargin>
+        <CardShadowMargin className="col-lg-6 col-sm-12">
             <CardShadow width={wdt} height={high}>
                 <GlassContainer>
                     <FlexContainer>
@@ -32,6 +33,8 @@ function GlassCard({wdt, high, repoTitl, repoDesc, repoLang, repoCol, repoLink})
 }
 
 const CardShadowMargin = styled.div`
+margin: 0;
+padding: 0;
 padding-top: 9px;
 padding-right: 7px;
 padding-bottom: 9px;
