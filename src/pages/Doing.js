@@ -16,35 +16,25 @@ function Doing(){
                     Here are the projects im currently working on:
                 </Info>
                 <GridContainer className="row">
-                    {Projects.map(pr => { i++; if(i%2 === 0){
-                        return (
-                            <>
-                                <GlassCardWip
-                                    wdt="96%"
-                                    high="100%"
-                                    projTitl={pr.name}
-                                    projDesc={pr.description}
-                                    projCol={pr.color}
-                                    projLink={pr.link}
-                                    projLang={pr.lang}
-                                />
-                                <Separator className="w-100"></Separator>
-                            </>
-                        );
-                    }else{
-                        return (
-                            <GlassCardWip
-                                wdt="96%"
-                                high="100%"
-                                projTitl={pr.name}
-                                projDesc={pr.description}
-                                projCol={pr.color}
-                                projLink={pr.link}
-                                projLang={pr.lang}
-                            />
-                        )  
+                    {
+                        Projects.map(pr => { 
+                            i++; 
+                            return (
+                                <>
+                                    <GlassCardWip
+                                        wdt="96%"
+                                        high="100%"
+                                        projTitl={pr.name}
+                                        projDesc={pr.description}
+                                        projCol={pr.color}
+                                        projLink={pr.link}
+                                        projLang={pr.lang}
+                                    />
+                                    {(i%2 === 0) ? <Separator className="w-100"></Separator> : null}
+                                </>
+                            );
+                        })
                     }
-                    })}
                 </GridContainer>
             </InfoCont>
         </div>

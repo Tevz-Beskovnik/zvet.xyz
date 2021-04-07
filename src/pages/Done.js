@@ -17,30 +17,22 @@ function Doing(){
                 <GridContainer className="row">
                     {Done ?
                         <>
-                            {Done.map((repo) => { i++; if(i%2 === 0){ return (
-                                <>
-                                    <GlassCard 
-                                        wdt="96%"
-                                        high="100%"
-                                        repoTitl={repo.name}
-                                        repoDesc={repo.description}
-                                        repoCol={repo.color}
-                                        repoLang={repo.lang}
-                                        repoLink={repo.link}
-                                    />
-                                    <Separator className="w-100"></Separator>
-                                </>
-                            )}else{ return (
-                                <GlassCard
-                                    wdt="96%"
-                                    high="100%"
-                                    repoTitl={repo.name}
-                                    repoDesc={repo.description}
-                                    repoCol={repo.color}
-                                    repoLang={repo.lang}
-                                    repoLink={repo.link}
-                                />
-                            )}})}
+                            {Done.map((repo) => { 
+                                i++;  
+                                return (
+                                    <>
+                                        <GlassCard 
+                                            wdt="96%"
+                                            high="100%"
+                                            repoTitl={repo.name}
+                                            repoDesc={repo.description}
+                                            repoCol={repo.color}
+                                            repoLang={repo.lang}
+                                            repoLink={repo.link}
+                                        />
+                                        {(i % 2 === 0) ? <Separator className="w-100"></Separator> : null}
+                                    </>
+                            )})}
                         </> :
                         <></>
                     }
