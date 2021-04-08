@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Contacts(){
@@ -9,6 +10,11 @@ function Contacts(){
             <InfoCont>
                 <Info>
                     You can get in touch with me on my <Link href="mailto: tevz.beskovnik@gmail.com">email</Link> or add me on my <Contact onClick={() => {navigator.clipboard.writeText("Z V E T#0952")}}>discord</Contact> or reach out trough any of the other linked platforms in the navbar.
+                </Info>
+                <Info>
+                    Here are some people that I, get advice from, collaborate with, and talk to:<br/>
+                    <WLink href="https://quantumly.dev/presence">Nejc Drobnič</WLink>,<br/>
+                    <WLink href="https://premlez.com/">Premlez</WLink>
                 </Info>
             </InfoCont>
         </div>
@@ -48,7 +54,8 @@ const Contact = styled.button`
     }
 `;
 
-const Link = styled.a`
+const WLink = styled.a`
+    margin-left: 10px;
     color: #58a6ff;
 
     &:hover{
