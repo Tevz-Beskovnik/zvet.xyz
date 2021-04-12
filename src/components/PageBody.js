@@ -7,6 +7,7 @@ import Playlist from "../pages/Playlist";
 import Done from "../pages/Done";
 import Contacts from "../pages/Contacts";
 import Doing from "../pages/Doing";
+import Software from "../pages/Software"
 
 function MainContainer(){
     useEffect(() => {
@@ -21,6 +22,7 @@ function MainContainer(){
                 <Route exact path="/doing" component={Doing}/>
                 <Route exact path="/playlist" component={Playlist}/>
                 <Route exact path="/contacts" component={Contacts}/>
+                <Route exact path="/software" component={Software}/>
             </Switch>
         </MainCont>
     );

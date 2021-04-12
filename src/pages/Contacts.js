@@ -14,7 +14,8 @@ function Contacts(){
                 <Info>
                     Here are some people that I, get advice from, collaborate with, and talk to:<br/>
                     <WLink href="https://quantumly.dev/presence">Nejc Drobnič</WLink>,<br/>
-                    <WLink href="https://premlez.com/">Premlez</WLink>
+                    <WLink href="https://premlez.com/">Premlez</WLink>,<br/>
+                    <WLink href="https://riboli.ga/">Patrik Riboli</WLink>
                 </Info>
             </InfoCont>
         </div>

@@ -19,6 +19,10 @@ function NavBar() {
                             Who am I
                             <ExtendingBar active={ pathname === "/" ? 1 : 0 }></ExtendingBar>
                         </Page>
+                        <Page to="/software" active={ pathname === "/software" ? 1 : 0}>
+                            Software I use
+                            <ExtendingBar active={ pathname === "/software" ? 1 : 0 }></ExtendingBar>
+                        </Page>
                         <Page to="/done" active={ pathname === "/done" ? 1 : 0 }>
                             What I have done
                             <ExtendingBar active={ pathname === "/done" ? 1 : 0 }></ExtendingBar>
