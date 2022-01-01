@@ -1,18 +1,32 @@
 {
     "Projects": [
         {
-            "name": "cpp3Dengine",
-            "description": "Voxel game engine made with C++, OpenGl, glew and glfw, currently only made the first person camera and lighting.",
-            "lang": "C++",
-            "link": "https://github.com/Tevzi2/cpp3Dengine",
-            "color": "#f34b7d"
-        },
-        {
             "name": "zvet.xyz",
             "description": "The website you are currently looking at, made with Create React App.",
             "lang": "JavaScript",
             "link": "https://github.com/Tevzi2/zvet.xyz",
             "color": "#f1e05a"
+        },
+        {
+            "name": "ZWET engine",
+            "description": "Game engine made in C++ with cmake and conan integration for easy workflow, with scriptable objects and scene scripting.",
+            "lang": "C++",
+            "link": "https://github.com/Tevzi2/Zwet-engine",
+            "color": "#f34b7d"
+        },
+        {
+            "name": "SFS OS",
+            "description": "Operating system running for running a local \"git-like\" server system, currently due to reserch private sadly",
+            "lang": "C/C++",
+            "link": "https://github.com/Tevzi2",
+            "color": "#f34b7d"
+        },
+        {
+            "name": "Blog",
+            "description": "Personal blog that will be tied to blog.zvet.xyz.",
+            "lang": "TypeScript",
+            "link": "https://github.com/Tevzi2",
+            "color": "#2b7489"
         }
     ]
 }
