@@ -15,7 +15,7 @@ function Doing(){
                     Welcome to my personal page, I'm a {end} year old amature developer from Slovenske Konjice, that likes to play around with web development and 3D graphics.
                 </Info>
                 <Info>
-                    I currently study at <Link href="https://sers.si/">SERŠ</Link>, the middle school for electronics and computer science in Maribor. I am currently attending the 4rd year of education.
+                    I currently study at <Link href="https://sers.si/">SERŠ</Link>, the middle school for electronics and computer science in Maribor. I am currently attending the 4th year of education.
                 </Info>
                 <Info>
                     I have also recently achieved 2nd place in the ACM web development compatition (<Link href="http://rtk.ijs.si/2021/rezultati.html#web">here</Link>)
