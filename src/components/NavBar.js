@@ -57,7 +57,7 @@ const ShadowContainer = styled.div`
     width: 100%;
     padding: 0;
     margin: 0;
-    box-shadow 0 3px 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .2);
 `;
 
 const NavigationGlass = styled.nav`
